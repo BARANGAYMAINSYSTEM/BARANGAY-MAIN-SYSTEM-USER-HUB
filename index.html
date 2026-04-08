@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barangay Paradise Main System Hub</title>
+    <style>
+        /* CSS RESET & BASE STYLES */
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        }
+        
+        body { 
+            background-color: #f4f7f6; 
+            color: #333; 
+            line-height: 1.6;
+        }
+
+        /* HEADER & NAVIGATION */
+        header { 
+            background-color: #1e3a8a; 
+            color: white; 
+            padding: 1rem 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .logo { 
+            font-size: 1.5rem; 
+            font-weight: bold; 
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        nav ul { 
+            list-style: none; 
+            display: flex; 
+            gap: 1.5rem; 
+        }
+        
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            font-weight: 500; 
+            transition: color 0.3s; 
+        }
+        
+        nav a:hover { 
+            color: #93c5fd; 
+        }
+
+        /* HERO SECTION */
+        .hero { 
+            text-align: center; 
+            padding: 4rem 2rem; 
+            background-color: #ebf8ff; 
+            border-bottom: 1px solid #e2e8f0; 
+        }
+        
+        .hero h1 { 
+            color: #1e3a8a; 
+            font-size: 2.5rem; 
+            margin-bottom: 1rem; 
+        }
+        
+        .hero p { 
+            font-size: 1.2rem; 
+            color: #475569; 
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* MAIN CONTAINER & GRID */
+        .container { 
+            padding: 3rem 5%; 
+            max-width: 1200px; 
+            margin: auto; 
+        }
+        
+        .section-title { 
+            font-size: 2rem; 
+            color: #1e3a8a; 
+            border-bottom: 2px solid #3b82f6; 
+            padding-bottom: 0.5rem; 
+            margin-bottom: 2rem; 
+            margin-top: 1rem;
+        }
+        
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 2rem; 
+            margin-bottom: 4rem; 
+        }
+
+        /* CARD STYLES */
+        .card { 
+            background: white; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+            padding: 1.5rem; 
+            transition: transform 0.2s, box-shadow 0.2s; 
+            border: 1px solid #e2e8f0;
+        }
+        
+        .card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+        
+        .card h3 { 
+            color: #2563eb; 
+            margin-bottom: 0.5rem; 
+        }
+        
+        .card .date { 
+            font-size: 0.85rem; 
+            color: #64748b; 
+            margin-bottom: 1rem; 
+            display: inline-block; 
+            background-color: #f1f5f9;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+        
+        .btn { 
+            display: inline-block; 
+            padding: 0.6rem 1.2rem; 
+            background-color: #2563eb; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            margin-top: 1rem; 
+            transition: background 0.3s; 
+            font-weight: 500;
+        }
+        
+        .btn:hover { 
+            background-color: #1d4ed8; 
+        }
+        
+        .video-placeholder { 
+            background-color: #cbd5e1; 
+            width: 100%; 
+            height: 200px; 
+            border-radius: 5px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin-bottom: 1.5rem; 
+            color: #475569; 
+            font-weight: bold; 
+            text-align: center;
+            padding: 1rem;
+            border: 2px dashed #94a3b8;
+        }
+
+        /* FOOTER */
+        footer { 
+            background-color: #1e3a8a; 
+            color: white; 
+            text-align: center; 
+            padding: 2rem 5%; 
+            margin-top: 2rem; 
+        }
+        
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            Barangay Paradise System Hub
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#announcements">Updates</a></li>
+                <li><a href="#tutorials">Tutorials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Barangay Main System</h1>
+        <p>Your main dashboard for all system-wide announcements, patch notes, and official video tutorials. Stay updated on the latest tools deployed by the Secretary's office.</p>
+    </section>
+
+    <div class="container">
+        
+        <h2 class="section-title" id="announcements">System Announcements & Updates</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>RBI System Import/Export Activated</h3>
+                <span class="date">April 8, 2026</span>
+                <p>The Record of Barangay Inhabitants (RBI) system has been updated. You can now seamlessly export resident lists to the main Barangay Information Management System (BIMS) without losing data format.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Pro Issuance Layout Fix Applied</h3>
+                <span class="date">April 4, 2026</span>
+                <p>Fixed a margin issue within the Barangay Pro Issuance Document printing layout. Clearances and Indigency certificates will now align perfectly with standard A4 paper dimensions.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Server Maintenance</h3>
+                <span class="date">April 1, 2026</span>
+                <p>The Barangay Operation System will undergo routine database maintenance this coming Saturday from 11:00 PM to 2:00 AM. Please save all pending documents before the downtime.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="tutorials">System Tutorials & Guides</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="video-placeholder">[Insert Video Embed Here: How to Issue Certificates]</div>
+                <h3>Drafting & Issuing Certificates</h3>
+                <p>Learn the precise steps for using the Pro Issuance system to search for a resident, fill out dynamic fields, and print official Barangay Clearances.</p>
+                <a href="#" class="btn">Watch Video</a>
+            </div>
+            
+            <div class="card">
+                <div class="video-placeholder">[Insert Video Embed Here: RBI Management]</div>
+                <h3>Managing the RBI Database</h3>
+                <p>A comprehensive walkthrough on adding new households to the RBI database, updating existing resident statuses, and avoiding duplicate entries.</p>
+                <a href="#" class="btn">Watch Video</a>
+            </div>
+            
+            <div class="card">
+                <div class="video-placeholder">[Insert Video Embed Here: Core System Navigation]</div>
+                <h3>Navigating the Operation System</h3>
+                <p>New to the system? This tutorial covers logging in securely, navigating the main dashboard, and accessing the different modules installed in the hub.</p>
+                <a href="#" class="btn">Watch Video</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Barangay Paradise Main System. Managed by the Office of the Barangay Secretary.</p>
+    </footer>
+
+    <script>
+        // This script allows smooth scrolling when clicking the navigation links in the header
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                
+                if(targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
