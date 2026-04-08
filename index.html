@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barangay Paradise Main System Hub</title>
+    
+    <link rel="manifest" href="manifest.json">
+    
+    <meta name="apple-mobile-web-app-status-bar" content="#1e3a8a">
+    <meta name="theme-color" content="#1e3a8a">
+
     <style>
         /* CSS RESET & BASE STYLES */
         * { 
@@ -195,7 +201,7 @@
     </header>
 
     <section id="home" class="hero">
-        <h1>Barangay Main System</h1>
+        <h1>Barangay Operation System Central</h1>
         <p>Your main dashboard for all system-wide announcements, patch notes, and official video tutorials. Stay updated on the latest tools deployed by the Secretary's office.</p>
     </section>
 
@@ -253,7 +259,7 @@
     </footer>
 
     <script>
-        // This script allows smooth scrolling when clicking the navigation links in the header
+        // Smooth Scrolling Logic
         document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -267,6 +273,19 @@
                 }
             });
         });
+
+        // PWA Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('ServiceWorker registration failed: ', error);
+                    });
+            });
+        }
     </script>
 </body>
 </html>
